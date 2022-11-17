@@ -25,5 +25,6 @@ while game_is_on:
     time.sleep(0.1)
     screen.update()
     ball.move()
-    print(ball.direction)
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce()
 screen.exitonclick()
